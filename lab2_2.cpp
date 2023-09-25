@@ -8,8 +8,6 @@ using namespace chrono;
 
 void multiplicarMatricesPorBloques(vector<vector<int>>& A, vector<vector<int>>& B, vector<vector<int>>& C, int tamanoBloque) {
     int n = A.size(); 
-
-
     for (int i0 = 0; i0 < n; i0 += tamanoBloque) {
         for (int j0 = 0; j0 < n; j0 += tamanoBloque) {
             for (int k0 = 0; k0 < n; k0 += tamanoBloque) {
@@ -38,6 +36,7 @@ int main() {
 
     int tamanoBloque = 4;
     for (int i = 100; i <= 2000; i += 100) {
+        tamanoBloque += 8;
         vector<vector<int>> A(i, vector<int>(i, 0));
         vector<vector<int>> B(i, vector<int>(i, 0));
         vector<vector<int>> resultado(i, vector<int>(i, 0));
